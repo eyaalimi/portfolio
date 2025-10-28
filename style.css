@@ -424,3 +424,48 @@ footer {
     padding: 0.3em 0.8em;
   }
 }
+/* --- Add/append these styles to your existing style.css --- */
+
+/* Certifications grid */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  align-items: start;
+  margin-top: 1rem;
+}
+
+.cert {
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  text-align: center;
+  overflow: hidden;
+}
+
+.cert img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* Make caption smaller and lighter */
+.cert figcaption {
+  margin-top: 0.55rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.cert figcaption small {
+  color: #666;
+  font-size: 0.82rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 520px) {
+  .cert-grid { gap: 0.6rem; }
+  .cert { padding: 0.4rem; }
+}
