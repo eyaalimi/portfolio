@@ -183,6 +183,205 @@ form button:hover {
   font-size: 1em;
 }
 
+/* Skills Section */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2em;
+  margin-top: 1.5em;
+}
+
+.skill-category {
+  background: var(--card-bg);
+  border: 1.5px solid #8f5aff55;
+  padding: 1.5em;
+  border-radius: 20px;
+  box-shadow: var(--glow);
+  transition: transform .15s, box-shadow .15s;
+}
+
+.skill-category:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 28px #8f5aff44, 0 0 38px #ffe76a66;
+}
+
+.skill-category h3 {
+  margin: 0 0 1em 0;
+  color: #8f5aff;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7em;
+}
+
+.skill-tag {
+  background: var(--primary-gradient);
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 25px;
+  font-size: 0.9em;
+  font-weight: 600;
+  box-shadow: 0 2px 8px #8f5aff33;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.skill-tag:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px #8f5aff66;
+}
+
+/* Experience Section */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2em;
+  margin-top: 1.5em;
+}
+
+.experience-item {
+  background: var(--card-bg);
+  border: 1.5px solid #ff5fad55;
+  padding: 1.8em;
+  border-radius: 20px;
+  box-shadow: var(--glow);
+  transition: transform .15s, box-shadow .15s;
+  position: relative;
+}
+
+.experience-item::after {
+  content: '';
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  width: 90px;
+  height: 90px;
+  background: radial-gradient(circle, #8f5aff44 60%, transparent 100%);
+  filter: blur(6px);
+  z-index: 0;
+}
+
+.experience-item:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 4px 28px #8f5aff44, 0 0 38px #ffe76a66;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.experience-header h3 {
+  margin: 0;
+  color: #8f5aff;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.experience-date {
+  background: var(--primary-gradient);
+  color: #fff;
+  padding: 0.4em 1em;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 600;
+  box-shadow: 0 2px 8px #8f5aff33;
+}
+
+.experience-item h4 {
+  margin: 0.5em 0 1em 0;
+  color: #2a2747;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.experience-item ul {
+  margin: 0;
+  padding-left: 1.5em;
+}
+
+.experience-item li {
+  margin-bottom: 0.5em;
+  line-height: 1.6;
+}
+
+/* Education Section */
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2em;
+  margin-top: 1.5em;
+}
+
+.education-item {
+  background: var(--card-bg);
+  border: 1.5px solid #ffe76a55;
+  padding: 1.8em;
+  border-radius: 20px;
+  box-shadow: var(--glow);
+  transition: transform .15s, box-shadow .15s;
+  position: relative;
+}
+
+.education-item::after {
+  content: '';
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  width: 90px;
+  height: 90px;
+  background: radial-gradient(circle, #ffe76a44 60%, transparent 100%);
+  filter: blur(6px);
+  z-index: 0;
+}
+
+.education-item:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 4px 28px #ffe76a44, 0 0 38px #ff5fad66;
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.education-header h3 {
+  margin: 0;
+  color: #ff5fad;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.education-date {
+  background: linear-gradient(90deg, #ffe76a 0%, #ff5fad 100%);
+  color: #2a2747;
+  padding: 0.4em 1em;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 600;
+  box-shadow: 0 2px 8px #ffe76a33;
+}
+
+.education-item h4 {
+  margin: 0.5em 0 1em 0;
+  color: #2a2747;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.education-item p {
+  margin: 0;
+  line-height: 1.6;
+  color: #2a2747;
+}
+
 footer {
   background: var(--primary-gradient);
   color: #fff;
@@ -206,5 +405,22 @@ footer {
   }
   form {
     padding: 1em 0.7em;
+  }
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2em;
+  }
+  .experience-header, .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5em;
+  }
+  .experience-date, .education-date {
+    align-self: flex-start;
+  }
+  nav a {
+    margin-right: 1em;
+    font-size: 0.9em;
+    padding: 0.3em 0.8em;
   }
 }
